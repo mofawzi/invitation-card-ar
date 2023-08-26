@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f4f1de;
+  background-image: url("https://source.unsplash.com/1600x900/?wedding");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.body-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 1s ease;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.body-details {
+  margin-bottom: 1.5rem;
+}
+
+.header-title {
+  font-family: "Ruwudu", cursive;
+  font-size: 2.5rem;
+  color: #3d405b;
+  margin: 0;
+  animation: slideIn 1s ease;
+}
+
+.header-subtitle {
+  font-family: "Ruwudu", cursive;
+  font-size: 1.8rem;
+  color: black;
+  margin: 0;
+  animation: slideIn 2s ease;
+}
+
+.header-divider {
+  height: 4px;
+  background-color: #81b29a;
+  width: 60%;
+  margin: 0.5rem auto;
+}
+
+.name-ampersand {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  animation: slideIn 1s ease 0.45s;
+  animation-fill-mode: backwards;
+}
+
+.wedding-details {
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  font-family: "Ruwudu", cursive;
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  animation: slideIn 1s ease 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.date-time {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  animation: slideIn 1s ease 0.6s;
+  animation-fill-mode: backwards;
+}
+
+.time-reminder {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  animation: slideIn 1s ease 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.venue {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  animation: slideIn 1s ease 0.9s;
+  animation-fill-mode: backwards;
+}
+
+.directions-container {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.directions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  animation: blink 2s ease-in-out infinite;
+}
+
+.directions-btn {
+  color: #ffa500; /* Change the color as per your preference */
+  font-weight: bold; /* Styling the text as bold */
+  text-decoration: none; /* Removes the underline from the hyperlink */
+}
+.directions-btn:hover {
+  color: #ff4500; /* Changes color when hovered */
+}
+
+.directions-icon {
+  font-size: 5rem;
+  color: #e07a5f;
+}
+a:visited {
+  color: #e07a5f;
+}
+
+.directions-text {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* Scrolling Bar */
+
+body::-webkit-scrollbar {
+  background-color: var(--clr-dark);
+  width: 0.75vw;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--clr-dark);
+  border-radius: 25px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent);
+  border-radius: 25px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-accent);
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  :root {
+    /* Font Sizes */
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .body-container {
+    width: 90%;
+    height: 90%;
+  }
+
+  .body-title {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .body-container {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .body-title {
+    font-size: 2.5rem;
+  }
+
+  .name,
+  .name-ampersand {
+    font-size: 1.5rem;
+  }
+
+  .date-time,
+  .time-reminder,
+  .venue {
+    font-size: 1rem;
+  }
+
+  .directions-icon {
+    font-size: 2.5rem;
+  }
+
+  .directions-text {
+    font-size: 0.9rem;
+  }
+}
